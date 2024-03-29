@@ -32,15 +32,15 @@ describe('components:transform', () => {
     `)
 
     expect(await transform('', '/Foo.vue?nuxt_component=server&nuxt_component_name=Foo&nuxt_component_export=default')).toMatchInlineSnapshot(`
-      "import { createServerComponent } from "/Users/daniel/code/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
+      "import { createServerComponent } from "/home/runner/work/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
       export default createServerComponent("Foo")"
     `)
     expect(await transform('', '/Foo.vue?nuxt_component=server,async&nuxt_component_name=Foo&nuxt_component_export=default')).toMatchInlineSnapshot(`
-      "import { createServerComponent } from "/Users/daniel/code/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
+      "import { createServerComponent } from "/home/runner/work/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
       export default createServerComponent("Foo")"
     `)
     expect(await transform('', '/Foo.vue?nuxt_component=server&nuxt_component_name=Foo&nuxt_component_export=Foo')).toMatchInlineSnapshot(`
-      "import { createServerComponent } from "/Users/daniel/code/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
+      "import { createServerComponent } from "/home/runner/work/nuxt/nuxt/packages/nuxt/src/components/runtime/server-component"
       export const Foo = createServerComponent("Foo")"
     `)
   })
